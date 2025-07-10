@@ -1,0 +1,119 @@
+---
+layout: layout-page.njk
+title: Pagina de inicio
+description: Meta descripción de la página de inicio
+---
+
+<main>
+
+  <section class="hero-video position-relative vh-100 mt-5">
+    <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-n1">
+      <source src="/img/trucks.mp4" type="video/mp4">
+      Tu navegador no soporta el video HTML5.
+    </video>
+    
+    <article class="position-absolute bottom-0">
+      <div class="p-5 mb-5">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">El poder de la carretera comienza aquí.</h1>
+
+          <a href="/contacto">
+            <button type="button" 
+                    class="btn btn-lg px-4 border text-white mt-3">Contáctanos</button>
+          </a>
+
+        </div>
+      </div>
+    </article>    
+
+  </section>
+
+    <!-- Servicios -->
+  <section class="container text-center my-5">
+
+    <div class="row">
+
+      <div class="col-lg"> 
+          <article class="card min-vh-md-40 heroc-image" style="--bg-hero:url(../img/taller.jpg);">
+            <div class="hero-image__overlay"></div>             
+              <div class="py-5 position-relative mt-auto">
+                <h3 class="text-white">Taller</h3>
+              </div>       
+          </article>
+      </div>
+
+      <div class="col-lg">   
+            <article class="card min-vh-md-40 heroc-image" style="--bg-hero:url(../img/repuestos.jpg);">
+              <div class="hero-image__overlay"></div>                           
+              <div class="py-5 position-relative mt-auto">
+                <h3 class="text-white">Repuestos</h3>
+              </div>  
+            </article>
+      </div>
+
+      <div class="col-lg">     
+            <article class="card min-vh-md-40 heroc-image">
+              <div class="hero-image__overlay"></div>                           
+                <div class="py-5 position-relative mt-auto">
+                  <h3 class="text-white">Electronica</h3>
+                </div>  
+            </article>
+      </div>
+    </div>
+        
+  </section>
+
+
+  <!-- Articulos-->
+  <section class="container my-5">
+    <div class="row">
+      
+      {% for post in collections.blog %}
+             
+        <div class="col-4">
+
+          <a href="{{ post.url }}">
+
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">{{ post.data.title }}</h3>
+                  <p class="card-text">{{ post.data.description }}</p>
+                </div>
+              </div>     
+          </a>
+
+        </div>
+
+      {% endfor %}   
+    </div>
+  </section>  
+
+
+
+
+
+<!-- Tienda -->
+  <article class="shop hero-image text-white px-4 py-5 text-center my-5"> 
+    <div class="hero-image__overlay">
+    </div> 
+    <div class="py-5 position-relative"> 
+      <h1 class="display-5 fw-bold text-white">Visita nuestra tienda</h1> 
+      <div class="col-lg-6 mx-auto"> 
+        <p class="fs-5 mb-4">Trucksrepair cuenta con una tienda online con mas de 1500 productos</p> 
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+          <a href="https://listado.mercadolibre.cl/_CustId_797727679" target="_blank">
+            <button type="button" class="btn btn-lg px-4 border text-white">Mercado Libre</button>
+          </a>
+        </div> 
+      </div> 
+    </div>   
+
+  </article>
+
+    
+</main>
+
+
+
+
+

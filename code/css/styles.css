@@ -1,0 +1,88 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+video {
+  object-fit: cover;
+}
+
+/* Servicios */
+
+.heroc-image {
+  --bg-hero: url("../img/electronica.jpg");
+  background-image: var(--bg-hero);
+  background-repeat: no-repeat;    
+  background-position: center;  
+  background-size: cover;   
+}
+
+.min-vh-md-40 {
+  min-height: 40vh;
+}
+
+.hero-image {
+  --bg-hero: url("../img/taller.png");
+  background-image: var(--bg-hero);
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+  background-position: center; /* Centra la imagen */
+  min-height: 50vh;
+  position: relative; /* Es importante para posicionar el overlay */
+  display: flex; /* Para centrar verticalmente el contenido */
+  align-items: center; /* Para centrar verticalmente el contenido */
+  justify-content: center; /* Para centrar horizontalmente el contenido */
+}
+
+.article__element--mh-60 {
+  min-height: 60vh;
+  align-items: end;
+  justify-content: end; 
+}
+
+.hero-image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+  z-index: 1; /* Asegura que el overlay esté por encima de la imagen */
+}
+
+.hero-image .py-5, .heroc-image .py-5 {
+  z-index: 2; 
+}
+
+section {
+  padding-top: 50px;
+}
+
+.container-md {
+  max-width: 60%;  
+}
+
+section article p, ul {
+    font-size: 22px;
+    text-align: justify;
+}
+
+li {
+  text-decoration: none;
+}
+
+/* Blog */
+
+i {
+  text-transform: uppercase;
+}
+
+/** Mobile */
+
+@media screen and (max-width:780px) {
+
+  .navbar img {
+    width: 120px;
+  }
+
+
+}
